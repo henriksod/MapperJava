@@ -13,7 +13,7 @@ if [ "$#" -ne 5 ]; then
     exit 
 fi
 
-cd "$(dirname "$0")/HenrikS/out/production/KompaiMapper"
+cd "$(dirname "$0")/HenrikS"
 
 url="$1"
 x1="$2" 
