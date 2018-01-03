@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Example script for calling mapper. Don't forget to make it executable (chmod +x mapper)
+# Change the last line (java Mapper ...) to suit your needs
+# Author: Ola Ringdahl
+#
+# Inputs:
+# url specifies the address and port to the machine running MRDS. 
+# x1, y1, x2, y2 give the coordinates of the lower left and upper right corners of the area the robot should explore and map.
+
+if [ "$#" -ne 5 ]; then
+    echo "Usage: ./mapper url x1 y1 x2 y2"
+    exit 
+fi
+
+cd "$(dirname "$0")
+
+url="$1"
+x1="$2" 
+y1="$3" 
+x2="$4" 
+y2="$5"
+
+java ./HenrikS/Mapper $url $x1 $y1 $x2 $y2
+
